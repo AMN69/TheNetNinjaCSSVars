@@ -1,14 +1,25 @@
 /* --- Variables --- */
 
+/* AMN - you declare vars with double dash first and within the scope you want 
+ them to use. If you declare at :root the scope is the entire DOM but you could
+ declare them in the head, body or even in a div limiting the scope */
+ 
 :root{
     --theme-color: #3e84da;
     --link-color: #daa33e;
     --grid-layout: 1fr 1fr 1fr;
 }
 
+/* AMN - We are overriding the var --link-color on the nav 
+   this would be hard to do with SASSS */
+
 nav{
     --link-color: #000;
 }
+
+/* AMN -SASS and LESS must be transpiled and preprocessed, CSS NOT 
+   With SASS and LESS would be difficult to change variables values on a media queries 
+   this is an advantage of CSS */
 
 @media screen and (max-width: 760px){
     :root{
@@ -103,5 +114,5 @@ footer .blurb{
     width: 20px;
     height: 20px;
     margin: 10px;
-    cursor: pointer;
+    cursor: pointer; /* AMN - a hand appears when you hoover over it */
 }
